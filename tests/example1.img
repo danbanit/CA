@@ -1,0 +1,16 @@
+# Memory image example - comments are allowed in lines that start with # as first character!
+# Program start at address 0, after reset.
+I@0x00000000
+ADD $3, $0, 4
+ADD $4, $0, 4
+SUB $7, $0, 1
+SUB $8, $0, 1
+HALT $0
+
+
+# Program ends with infinite loop (avoid fall-through to undefined data following the end of the program)
+
+# Data for this program. Any other location that is not explicitly set is implicitly set to zero.
+D@0x000032A0
+0x12345678
+0xFFFFFFFF
